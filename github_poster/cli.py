@@ -147,6 +147,11 @@ def run():
     output =args.output
     if output == "":
         os.path.join(OUT_FOLDER, file_name)
+
+    base_dir = os.path.dirname(output)
+    if base_dir != "":
+        os.makedirs(base_dir, exist_ok=True)
+
     p.draw(d(p), output)
 
     # generate skyline
