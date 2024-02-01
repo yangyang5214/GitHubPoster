@@ -144,7 +144,10 @@ def run():
     file_name = f"{file_name}.svg"
 
     # for summary we have different logic #TODO refactor
-    p.draw(d(p), os.path.join(OUT_FOLDER, file_name))
+    output =args.output
+    if output == "":
+        os.path.join(OUT_FOLDER, file_name)
+    p.draw(d(p), output)
 
     # generate skyline
     if args.with_skyline:

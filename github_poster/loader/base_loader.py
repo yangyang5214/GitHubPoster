@@ -105,6 +105,13 @@ class BaseLoader(ABC):
             help='User name to display (default: "Joey").',
         )
         group.add_argument(
+            "--output",
+            metavar="FILE",
+            type=str,
+            default="",
+            help='Name of generated SVG image file (default: "")',
+        )
+        group.add_argument(
             "--background-color",
             dest="background_color",
             metavar="COLOR",
